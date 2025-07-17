@@ -5,9 +5,29 @@
     <link rel="icon" type="image/jpeg" href="/logo.jpeg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>R/A Controle de Pragas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <script>
+      window.addEventListener("load", function(){
+        window.cookieconsent.initialise({
+          palette: {
+            popup: { background: "#2e7d32" },
+            button: { background: "#43a047" }
+          },
+          theme: "classic",
+          position: "bottom",
+          content: {
+            message: "Este site utiliza cookies para melhorar sua experiência.",
+            dismiss: "Aceitar",
+            link: "Saiba mais",
+            href: "/politica-de-privacidade.html"
+          }
+        })
+      });
+    </script>
   </body>
 </html>
